@@ -19,7 +19,7 @@ public class Main {
         } else {
             for (NoteBook notebook : filteredNotebooks) {
                 System.out.println(notebook.getManufacturer() + " " + notebook.getModel() + " " + notebook.getScreenSize() + " "
-                        + notebook.getScreenResolution() + " " + notebook.getRAM() + " " + notebook.getHDD() +
+                        + notebook.getScreenResolution() + " " + notebook.getRam() + " " + notebook.getHdd() +
                         " " + notebook.getOs() + " " + notebook.getColor() + " " + notebook.getPrice());
             }
         }
@@ -32,10 +32,10 @@ public class Main {
     private static void laptops(List<NoteBook> notebooks) {
         NoteBook lap1 = new NoteBook("Acer", "AcerBook123", 17, 1024, "black", 4, "Windows", 1024, 100000.0);
         NoteBook lap2 = new NoteBook("Acer", "AcerBook125", 19, 3076, "black", 16, "Windows", 2048, 120000.0);
-        NoteBook lap3 = new NoteBook("Lenovo", "E15", 17, 1024, "black", 4, "Windows", 512, 70000.0);
+        NoteBook lap3 = new NoteBook("Lenovo", "E15", 17, 1024, "white", 4, "Windows", 512, 70000.0);
         NoteBook lap4 = new NoteBook("Lenovo", "E17", 17, 1024, "black", 8, "Windows", 1024, 110000.0);
         NoteBook lap5 = new NoteBook("HP", "PavilionG6", 16, 768, "black", 4, "Windows", 320, 80000.0);
-        NoteBook lap6 = new NoteBook("HP", "PavilionGV7", 17, 1024, "black", 4, "Windows", 512, 150000.0);
+        NoteBook lap6 = new NoteBook("HP", "PavilionGV7", 17, 1024, "red", 4, "Windows", 512, 150000.0);
         notebooks.add(lap1);
         notebooks.add(lap2);
         notebooks.add(lap3);
@@ -133,12 +133,12 @@ public class Main {
                 Object filterValue = filters.get(filterKey);
                 switch (filterKey) {
                     case "manufacturer":
-                        if (!notebook.getManufacturer().equalsIgnoreCase((String) filterValue)) {
+                        if (notebook.getManufacturer().equalsIgnoreCase((String) filterValue)) {
                             filteredNotebooks.add(notebook);
                         }
                         break;
                     case "model":
-                        if (!notebook.getModel().equals(filterValue)) {
+                        if (notebook.getModel().equals(filterValue)) {
                             filteredNotebooks.add(notebook);
                         }
                         break;
@@ -153,22 +153,22 @@ public class Main {
                         }
                         break;
                     case "RAM":
-                        if (notebook.getRAM() >= (int) filterValue) {
+                        if (notebook.getRam() >= (int) filterValue) {
                             filteredNotebooks.add(notebook);
                         }
                         break;
                     case "HDD":
-                        if (notebook.getHDD() >= (int) filterValue) {
+                        if (notebook.getHdd() >= (int) filterValue) {
                             filteredNotebooks.add(notebook);
                         }
                         break;
                     case "os":
-                        if (!notebook.getOs().equalsIgnoreCase((String) filterValue)) {
+                        if (notebook.getOs().equalsIgnoreCase((String) filterValue)) {
                             filteredNotebooks.add(notebook);
                         }
                         break;
                     case "color":
-                        if (!notebook.getColor().equals(filterValue)) {
+                        if (notebook.getColor().equals(filterValue)) {
                             filteredNotebooks.add(notebook);
                         }
                         break;

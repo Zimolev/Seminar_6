@@ -6,24 +6,24 @@ public class NoteBook {
     private Integer screenSize;
     private Integer screenResolution;
     private String color;
-    private Integer RAM;
+    private Integer ram;
     private String os;
-    private Integer HDD;
+    private Integer hdd;
     private Double price;
 
     public NoteBook() {
     }
 
     public NoteBook(String manufacturer, String model, Integer screenSize, Integer screenResolution,
-                    String color, Integer RAM, String os, Integer HDD, Double price) {
+                    String color, Integer ram, String os, Integer hdd, Double price) {
         this.manufacturer = manufacturer;
         this.model = model;
         this.screenSize = screenSize;
         this.screenResolution = screenResolution;
         this.color = color;
-        this.RAM = RAM;
+        this.ram = ram;
         this.os = os;
-        this.HDD = HDD;
+        this.hdd = hdd;
         this.price = price;
     }
 
@@ -31,74 +31,37 @@ public class NoteBook {
         return price;
     }
 
-    public void setPrice() {
-        this.price = price;
-    }
-
     public String getManufacturer() {
         return manufacturer;
-    }
-
-    public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
     }
 
     public String getModel() {
         return model;
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
-
     public Integer getScreenSize() {
         return screenSize;
-    }
-
-    public void setScreenSize(Integer screenSize) {
-        this.screenSize = screenSize;
     }
 
     public Integer getScreenResolution() {
         return screenResolution;
     }
 
-    public void setScreenResolution(Integer screenResolution) {
-        this.screenResolution = screenResolution;
-    }
-
     public String getColor() {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public Integer getRAM() {
-        return RAM;
-    }
-
-    public void setRAM(Integer RAM) {
-        this.RAM = RAM;
+    public Integer getRam() {
+        return ram;
     }
 
     public String getOs() {
         return os;
     }
 
-    public void setOs(String os) {
-        this.os = os;
+    public Integer getHdd() {
+        return hdd;
     }
-
-    public Integer getHDD() {
-        return HDD;
-    }
-
-    public void setHDD(Integer HDD) {
-        this.HDD = HDD;
-    }
-
 
     @Override
     public String toString() {
@@ -108,9 +71,9 @@ public class NoteBook {
                 ", screenSize=" + screenSize +
                 ", screenResolution=" + screenResolution +
                 ", color='" + color + '\'' +
-                ", RAM=" + RAM +
+                ", RAM=" + ram +
                 ", os='" + os + '\'' +
-                ", HDD=" + HDD +
+                ", HDD=" + hdd +
                 ", price=" + price +
                 '}';
     }
